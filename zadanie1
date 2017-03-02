@@ -1,0 +1,8 @@
+@prefix tsiss: <http://semantic.cs.put.poznan.pl/dokuwiki/#>.
+
+tsiss:SOS1 rdf:type tsiss:sosPomidorowy
+tsiss:SOS1 tsiss:jestProdukowane _:zaklad1
+	_:zaklad1 tsiss:maLokalizacje tsiss:Kotlin
+tsiss:SOS1 tsiss:maStan tsiss:s1 
+	tsiss:s1 tsiss:maJednostke tsiss:litr
+	tsiss:s1 tsiss:maWartosc tsiss:200
