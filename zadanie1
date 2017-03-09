@@ -1,8 +1,25 @@
-@prefix tsiss: <http://semantic.cs.put.poznan.pl/dokuwiki/#>.
+//zad 1
 
-tsiss:SOS1 rdf:type tsiss:sosPomidorowy
-tsiss:SOS1 tsiss:jestProdukowane _:zaklad1
-	_:zaklad1 tsiss:maLokalizacje tsiss:Kotlin
-tsiss:SOS1 tsiss:maStan tsiss:s1 
-	tsiss:s1 tsiss:maJednostke tsiss:litr
-	tsiss:s1 tsiss:maWartosc tsiss:200
+@prefix tsiss: <http://semantic.cs.put.poznan.pl/dokuwiki/#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix zdrowie: <adres portalu zdrowie>.
+
+tsiss:SOS1 rdf:type tsiss:sosPomidorowy;
+tsiss:SOS1 tsiss:jestProdukowane _:zaklad1;
+	_:zaklad1 tsiss:maLokalizacje tsiss:Kotlin;
+tsiss:SOS1 tsiss:maStan tsiss:s1 ;
+	tsiss:s1 tsiss:maJednostke tsiss:litr;
+	tsiss:s1 tsiss:maWartosc tsiss:200;
+
+//zad 2
+_:zaklad1 tsiss:maLokalizacje tsiss:Kotlin;
+_:zaklad1 tsiss:produkuje _:produkt1;
+	_:produkt1 a tsiss:Produkt;
+	_:produkt rdf:type tsiss:Sos_pomidorowy;
+
+//zad 3
+zdrowie:Zdrowie tsiss:twierdzi _:twierdzenie1
+	_:twierdzenie1 a rdf:Statement ;
+	rdf:subject tsiss:Maka_orkiszowa;
+	rdf:predicate tsiss:jestZdrowsza;
+	rdf:object tsiss:Maka_pszenna;
